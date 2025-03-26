@@ -129,9 +129,20 @@ function HomePage() {
           />
         </div>
         
+        {/* Закомментированный оригинальный заголовок 
         <h1>
           Голосование за Lego-мультфильм
         </h1>
+        */}
+        
+        {/* Новый заголовок-изображение */}
+        <div className="header-image">
+          <img 
+            src="/images/header.jpg" 
+            alt="Голосование за Lego-мультфильм" 
+            width="100%"
+          />
+        </div>
         
         <Link href="/works">
           <button className="works-button">
