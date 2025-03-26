@@ -104,7 +104,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-6 bg-[#346cdb]">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 sm:p-6 bg-white">
       {alert.show && (
         <Alert 
           message={alert.message} 
@@ -113,10 +113,10 @@ export default function Home() {
         />
       )}
       
-      <div className="w-full max-w-md mx-auto bg-[#346cdb] p-6 rounded-lg shadow-lg animate-fade-in">
-        <div className="flex justify-center mb-6">
+      <div className="w-full max-w-md mx-auto card animate-fade-in p-6 sm:p-8">
+        <div className="flex justify-center mb-8">
           {!logoError ? (
-            <div className="relative w-32 h-32">
+            <div className="relative w-28 h-28 sm:w-32 sm:h-32">
               <Image 
                 src="/images/logo.png" 
                 alt="Lego мультфильм логотип" 
@@ -124,21 +124,22 @@ export default function Home() {
                 style={{ objectFit: 'contain' }}
                 priority
                 onError={() => setLogoError(true)}
+                className="animate-fade-in"
               />
             </div>
           ) : (
-            <div className="w-32 h-32 flex items-center justify-center bg-[#ff5db7] rounded-full text-[#ffffff] font-[700] text-xl">
+            <div className="w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center bg-gradient-to-r from-primary to-secondary rounded-xl text-white font-bold text-2xl transform rotate-3 shadow-lg">
               LEGO
             </div>
           )}
         </div>
         
-        <h1 className="text-2xl font-[700] text-center text-[#ffffff] mb-6">
-          Форма для голосования за Lego-мультфильм<br />
-          <span className="text-[#ff5db7]">Номинация &quot;Выбор зрителя&quot;</span>
+        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4">
+          Голосование за Lego-мультфильм<br />
+          <span className="gradient-text">Номинация "Выбор зрителя"</span>
         </h1>
         
-        <p className="text-center text-[#ffffff] mb-8">
+        <p className="text-center text-gray-600 mb-8">
           Выберите номера трех роликов, которые вам понравились больше всего.
         </p>
         
@@ -158,12 +159,16 @@ export default function Home() {
           <button
             type="submit"
             disabled={hasVoted || isSubmitting}
-            className={`w-full bg-[#ff5db7] text-[#ffffff] font-[700] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all ${
+            className={`w-full btn-primary ${
               hasVoted || isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
             {isSubmitting ? 'Обработка...' : 'Проголосовать'}
           </button>
+
+          <p className="mt-4 text-xs text-gray-500 text-center">
+            Ваш голос очень важен для нас. Спасибо за участие!
+          </p>
         </form>
       </div>
     </main>

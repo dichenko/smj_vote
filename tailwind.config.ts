@@ -10,6 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        primary: '#6366f1', // Indigo
+        secondary: '#f472b6', // Pink
+        accent: '#10b981', // Emerald
         white: '#ffffff',
       },
       animation: {
@@ -18,17 +21,24 @@ const config: Config = {
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         fadeOut: {
-          '0%': { opacity: '1' },
-          '100%': { opacity: '0' },
+          '0%': { opacity: '1', transform: 'translateY(0)' },
+          '100%': { opacity: '0', transform: 'translateY(10px)' },
         },
       },
       fontWeight: {
         bold: '700',
       },
+      borderRadius: {
+        'xl': '1rem',
+        '2xl': '1.5rem',
+      },
+      boxShadow: {
+        'card': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      }
     },
   },
   plugins: [],

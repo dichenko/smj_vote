@@ -11,7 +11,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
-  themeColor: "#346cdb"
+  themeColor: "#6366f1"
 };
 
 export default function RootLayout({
@@ -21,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      </head>
+      <body className="bg-white text-gray-800">
         {children}
       </body>
     </html>
