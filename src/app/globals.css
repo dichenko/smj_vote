@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Импорт файла с сохраненными классами */
+@import '../tailwind-safelist.css';
+
 :root {
   --primary: #346cdb;
   --secondary: #ff5db7;
