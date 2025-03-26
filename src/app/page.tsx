@@ -136,7 +136,7 @@ export default function Home() {
         
         <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4">
           Голосование за Lego-мультфильм<br />
-          <span className="gradient-text">Номинация "Выбор зрителя"</span>
+          <span className="gradient-text">Номинация &quot;Выбор зрителя&quot;</span>
         </h1>
         
         <p className="text-center text-gray-600 mb-8">
