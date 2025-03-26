@@ -185,8 +185,12 @@ button:disabled {
 
 .work-title {
   margin: 0 0 10px 0;
-  font-size: 18px;
+  font-size: 14px;
   color: #346cdb;
+  line-height: 1.3;
+  font-weight: 500;
+  white-space: normal;
+  overflow: hidden;
 }
 
 .video-wrapper {

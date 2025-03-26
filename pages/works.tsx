@@ -41,7 +41,7 @@ function WorksPage() {
         <div className="works-container">
           {/* Плейсхолдер для работы №1 */}
           <div className="work-item">
-            <h3 className="work-title">Название работы №1</h3>
+            <h3 className="work-title">№1 Весёлая история (Екатеринбург)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №1 */}
               <iframe 
@@ -55,7 +55,7 @@ function WorksPage() {
           
           {/* Плейсхолдер для работы №2 */}
           <div className="work-item">
-            <h3 className="work-title">Название работы №2</h3>
+            <h3 className="work-title">№2 Приключения Лего-человечков (Москва)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №2 */}
               <iframe 
