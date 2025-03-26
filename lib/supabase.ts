@@ -1,9 +1,48 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+// Значения по умолчанию для локальной разработки
+const defaultUrl = 'https://placeholder.supabase.co';
+const defaultKey = 'placeholder_key';
 
-export const supabase = createClient(supabaseUrl, supabaseKey);
+// Получаем URL и ключ из переменных окружения или используем заглушки
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || defaultUrl;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || defaultKey;
+
+// Создаем клиент только если мы на клиенте или если URL действительный
+let supabase: any = null;
+
+// Функция для определения, находимся ли мы на клиенте
+const isClient = () => typeof window !== 'undefined';
+
+// Функция для инициализации Supabase клиента
+const initSupabase = () => {
+  if (!supabase) {
+    try {
+      // Проверяем валидность URL
+      new URL(supabaseUrl);
+      supabase = createClient(supabaseUrl, supabaseKey);
+    } catch (error) {
+      // Если URL невалидный и мы на сервере, используем мок-объект
+      if (!isClient()) {
+        supabase = {
+          from: () => ({
+            select: () => ({
+              eq: () => ({
+                maybeSingle: async () => ({ data: null, error: null })
+              })
+            }),
+            insert: async () => ({ error: null })
+          })
+        };
+        console.warn('Using mock Supabase client for server rendering');
+      } else {
+        console.error('Invalid Supabase URL:', error);
+        throw error;
+      }
+    }
+  }
+  return supabase;
+};
 
 // Интерфейс для голоса
 export interface Vote {
@@ -13,6 +52,13 @@ export interface Vote {
 
 // Функция для проверки, голосовал ли пользователь
 export async function hasUserVoted(tgId: string): Promise<boolean> {
+  const supabase = initSupabase();
+  
+  // На сервере возвращаем false, чтобы избежать ошибок
+  if (!isClient()) {
+    return false;
+  }
+  
   const { data, error } = await supabase
     .from('votes')
     .select('tg_id')
@@ -29,6 +75,13 @@ export async function hasUserVoted(tgId: string): Promise<boolean> {
 
 // Функция для сохранения голоса
 export async function saveVote(tgId: string, choices: number[]): Promise<boolean> {
+  const supabase = initSupabase();
+  
+  // На сервере нельзя сохранять голоса
+  if (!isClient()) {
+    return false;
+  }
+  
   const { error } = await supabase
     .from('votes')
     .insert([{ tg_id: tgId, choices: choices }]);

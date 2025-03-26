@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import VideoSelector from '../components/VideoSelector';
-import Alert from '../components/Alert';
+import dynamic from 'next/dynamic';
 import { useTelegram } from '../hooks/useTelegram';
 import { hasUserVoted, saveVote } from '../lib/supabase';
 
-export default function Home() {
+// Импортируем компоненты динамически с отключенным SSR
+const VideoSelector = dynamic(() => import('../components/VideoSelector'), { ssr: false });
+const Alert = dynamic(() => import('../components/Alert'), { ssr: false });
+
+// Основной компонент
+function HomePage() {
   // Добавляем состояние для отслеживания клиентского рендеринга
   const [isClient, setIsClient] = useState(false);
   const { user, isReady } = useTelegram();
@@ -159,4 +163,7 @@ export default function Home() {
       </div>
     </main>
   );
-} 
+}
+
+// Экспортируем компонент с отключенным SSR
+export default dynamic(() => Promise.resolve(HomePage), { ssr: false }); 

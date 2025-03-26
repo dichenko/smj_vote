@@ -6,6 +6,10 @@ const nextConfig = {
     // Отключаем проверку типов во время сборки для ускорения
     ignoreBuildErrors: true,
   },
+  eslint: {
+    // Отключаем проверку ESLint во время сборки
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;

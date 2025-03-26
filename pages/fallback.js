@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 
 export default function Fallback() {
   useEffect(() => {
-    // Перенаправляем на основной маршрут
+    // Перенаправляем на главную страницу
     window.location.href = '/';
   }, []);
-  
+
   return (
     <div style={{ 
       display: 'flex', 
@@ -13,20 +13,16 @@ export default function Fallback() {
       justifyContent: 'center', 
       alignItems: 'center', 
       height: '100vh',
-      fontFamily: 'Inter, sans-serif',
-      color: '#6366f1'
+      padding: '20px',
+      textAlign: 'center'
     }}>
+      <h2>Перенаправление на главную страницу...</h2>
       <div style={{
-        fontSize: '24px',
-        marginBottom: '16px'
-      }}>
-        Загрузка...
-      </div>
-      <div style={{
-        width: '50px',
-        height: '50px',
-        border: '5px solid #f3f3f3',
-        borderTop: '5px solid #6366f1',
+        marginTop: '20px',
+        width: '40px',
+        height: '40px',
+        border: '4px solid #f3f3f3',
+        borderTop: '4px solid #1e88e5',
         borderRadius: '50%',
         animation: 'spin 1s linear infinite'
       }} />

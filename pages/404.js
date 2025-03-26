@@ -1,41 +1,28 @@
-import { useEffect } from 'react';
+import React from 'react';
 
-export default function Custom404() {
-  useEffect(() => {
-    // Перенаправляем на главную страницу
-    window.location.href = '/';
-  }, []);
-
+export default function NotFound() {
   return (
     <div style={{ 
       display: 'flex', 
       flexDirection: 'column',
-      justifyContent: 'center', 
       alignItems: 'center', 
+      justifyContent: 'center', 
       height: '100vh',
-      fontFamily: 'Inter, sans-serif',
-      color: '#6366f1'
+      padding: '20px',
+      textAlign: 'center'
     }}>
-      <div style={{
-        fontSize: '24px',
-        marginBottom: '16px'
+      <h1>404 - Страница не найдена</h1>
+      <p>Извините, запрашиваемая страница не существует.</p>
+      <a href="/" style={{ 
+        marginTop: '20px',
+        padding: '10px 20px',
+        backgroundColor: '#1e88e5',
+        color: 'white',
+        textDecoration: 'none',
+        borderRadius: '4px'
       }}>
-        Перенаправление на главную страницу...
-      </div>
-      <div style={{
-        width: '50px',
-        height: '50px',
-        border: '5px solid #f3f3f3',
-        borderTop: '5px solid #6366f1',
-        borderRadius: '50%',
-        animation: 'spin 1s linear infinite'
-      }} />
-      <style jsx>{`
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-      `}</style>
+        Вернуться на главную
+      </a>
     </div>
   );
 } 
