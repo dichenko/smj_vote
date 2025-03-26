@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import { useTelegram } from '../hooks/useTelegram';
 import { hasUserVoted, saveVote } from '../lib/supabase';
+import Link from 'next/link';
 
 // Импортируем компоненты динамически с отключенным SSR
 const VideoSelector = dynamic(() => import('../components/VideoSelector'), { ssr: false });
@@ -131,6 +132,12 @@ function HomePage() {
         <h1>
           Голосование за Lego-мультфильм
         </h1>
+        
+        <Link href="/works">
+          <button className="works-button">
+            Посмотреть работы участников
+          </button>
+        </Link>
         
         <p style={{ textAlign: 'center', marginBottom: '20px' }}>
           Выберите номера трех роликов, которые вам понравились больше всего.
