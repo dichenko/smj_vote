@@ -48,6 +48,9 @@ const initSupabase = () => {
 export interface Vote {
   tg_id: string;
   choices: number[];
+  username?: string;  // Telegram логин пользователя
+  first_name?: string; // Имя пользователя
+  last_name?: string;  // Фамилия пользователя
 }
 
 // Функция для проверки, голосовал ли пользователь
@@ -74,7 +77,13 @@ export async function hasUserVoted(tgId: string): Promise<boolean> {
 }
 
 // Функция для сохранения голоса
-export async function saveVote(tgId: string, choices: number[]): Promise<boolean> {
+export async function saveVote(
+  tgId: string, 
+  choices: number[], 
+  username?: string, 
+  firstName?: string, 
+  lastName?: string
+): Promise<boolean> {
   const supabase = initSupabase();
   
   // На сервере нельзя сохранять голоса
@@ -84,7 +93,13 @@ export async function saveVote(tgId: string, choices: number[]): Promise<boolean
   
   const { error } = await supabase
     .from('votes')
-    .insert([{ tg_id: tgId, choices: choices }]);
+    .insert([{ 
+      tg_id: tgId, 
+      choices: choices,
+      username: username,
+      first_name: firstName,
+      last_name: lastName
+    }]);
   
   if (error) {
     console.error('Error saving vote:', error);

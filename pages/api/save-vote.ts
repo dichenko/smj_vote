@@ -14,7 +14,7 @@ export default async function handler(
     return res.status(405).json({ success: false, error: 'Method not allowed' });
   }
 
-  const { tg_id, choices } = req.body;
+  const { tg_id, choices, username, first_name, last_name } = req.body;
   
   if (!tg_id || !choices || !Array.isArray(choices) || choices.length !== 3) {
     return res.status(400).json({ success: false, error: 'Invalid request data' });
@@ -34,8 +34,8 @@ export default async function handler(
       return res.status(400).json({ success: false, error: 'Please select 3 different videos' });
     }
     
-    // Сохраняем голос
-    const success = await saveVote(tg_id, choices);
+    // Сохраняем голос с дополнительной информацией пользователя
+    const success = await saveVote(tg_id, choices, username, first_name, last_name);
     
     if (success) {
       return res.status(200).json({ success: true });

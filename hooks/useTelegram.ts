@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 interface TelegramUser {
   id: string;
   first_name?: string;
+  last_name?: string;
   username?: string;
 }
 
@@ -22,6 +23,7 @@ export function useTelegram() {
             setUser({
               id: WebApp.initDataUnsafe.user.id.toString(),
               first_name: WebApp.initDataUnsafe.user.first_name,
+              last_name: WebApp.initDataUnsafe.user.last_name,
               username: WebApp.initDataUnsafe.user.username,
             });
           } else {
@@ -29,6 +31,7 @@ export function useTelegram() {
             setUser({
               id: 'test_user_id_123',
               first_name: 'Test',
+              last_name: 'User',
               username: 'testuser',
             });
           }
@@ -42,6 +45,7 @@ export function useTelegram() {
         setUser({
           id: 'test_user_id_123',
           first_name: 'Test',
+          last_name: 'User',
           username: 'testuser',
         });
         setIsReady(true);

@@ -80,7 +80,14 @@ export default function Home() {
     setIsSubmitting(true);
     
     try {
-      const success = await saveVote(user.id, videoChoices);
+      // Передаем все доступные данные пользователя
+      const success = await saveVote(
+        user.id, 
+        videoChoices,
+        user.username,
+        user.first_name,
+        user.last_name
+      );
       
       if (success) {
         showAlert('Ваш голос успешно принят!', 'success');
