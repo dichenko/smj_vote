@@ -8,6 +8,8 @@ import { useTelegram } from '../../hooks/useTelegram';
 import { hasUserVoted, saveVote } from '../../lib/supabase';
 
 export default function Home() {
+  // Добавляем состояние для отслеживания клиентского рендеринга
+  const [isClient, setIsClient] = useState(false);
   const { user, isReady } = useTelegram();
   
   const [videoChoices, setVideoChoices] = useState<number[]>([0, 0, 0]);
@@ -19,6 +21,11 @@ export default function Home() {
     message: '',
     type: 'success'
   });
+  
+  // Устанавливаем isClient в true после монтирования компонента
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const showAlert = useCallback((message: string, type: 'success' | 'error') => {
     setAlert({
@@ -40,10 +47,10 @@ export default function Home() {
   }, [user, showAlert]);
 
   useEffect(() => {
-    if (user && isReady) {
+    if (user && isReady && isClient) {
       checkUserVoted();
     }
-  }, [user, isReady, checkUserVoted]);
+  }, [user, isReady, checkUserVoted, isClient]);
 
   const handleChoiceChange = (index: number, value: number) => {
     const newChoices = [...videoChoices];
