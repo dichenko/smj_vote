@@ -58,12 +58,10 @@ function WorksPage() {
               <h3 className="work-title">{work.title}</h3>
               <div className="video-wrapper">
                 <iframe 
-                  src={`https://rutube.ru/play/embed/${work.rutubeId}`} 
+                  src={`https://rutube.ru/play/embed/${work.rutubeId}/`} 
                   frameBorder="0" 
                   allow="clipboard-write; autoplay" 
                   allowFullScreen
-                  width="100%"
-                  height="225"
                 />
               </div>
             </div>
