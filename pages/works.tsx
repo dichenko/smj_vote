@@ -44,12 +44,7 @@ function WorksPage() {
             <h3 className="work-title">№1 Предшабатний переполох (Биробиджан)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №1 */}
-              <iframe 
-                src="https://rutube.ru/play/embed/placeholder1/" 
-                frameBorder="0" 
-                allow="clipboard-write; autoplay" 
-                allowFullScreen
-              />
+              <iframe width="720" height="405" src="https://rutube.ru/play/embed/ff1e7a4ad5052319ecd7c1748da01ad9/?p=SrgUPX9UmBgnpZM6FGp3Tw" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
           </div>
           
@@ -58,12 +53,7 @@ function WorksPage() {
             <h3 className="work-title">№2 Поучительная история (Брянск)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №2 */}
-              <iframe 
-                src="https://rutube.ru/play/embed/placeholder2/" 
-                frameBorder="0" 
-                allow="clipboard-write; autoplay" 
-                allowFullScreen
-              />
+              <iframe width="720" height="405" src="https://rutube.ru/play/embed/41062d3f191ab945f01474c088e7519c" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
           </div>
           
@@ -109,12 +99,7 @@ function WorksPage() {
             <h3 className="work-title">№7 Забытый чемодан (Ростов)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №7 */}
-              <iframe 
-                src="https://rutube.ru/play/embed/placeholder7/" 
-                frameBorder="0" 
-                allow="clipboard-write; autoplay" 
-                allowFullScreen
-              />
+              <iframe width="720" height="405" src="https://rutube.ru/play/embed/b8260b78b07ef9bb95cc93b22a0816aa" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
           </div>
           
@@ -123,12 +108,7 @@ function WorksPage() {
             <h3 className="work-title">№8 Эсав, дай цдаку! (Самара)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №8 */}
-              <iframe 
-                src="https://rutube.ru/play/embed/placeholder8/" 
-                frameBorder="0" 
-                allow="clipboard-write; autoplay" 
-                allowFullScreen
-              />
+              <iframe width="720" height="405" src="https://rutube.ru/play/embed/5fd2531ec9c1fec14ccf867ccfcdac42" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
           </div>
           
