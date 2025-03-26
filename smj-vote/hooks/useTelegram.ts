@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { WebApp } from '@tma.js/sdk';
+import WebApp from '@twa-dev/sdk';
 
 interface TelegramUser {
   id: string;
@@ -16,8 +16,6 @@ export function useTelegram() {
     const initTelegram = async () => {
       try {
         // Инициализируем WebApp
-        await WebApp.ready();
-        
         if (WebApp.initDataUnsafe.user) {
           setUser({
             id: WebApp.initDataUnsafe.user.id.toString(),

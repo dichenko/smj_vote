@@ -13,6 +13,7 @@ export default function Home() {
   const [videoChoices, setVideoChoices] = useState<number[]>([0, 0, 0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasVoted, setHasVoted] = useState(false);
+  const [logoError, setLogoError] = useState(false);
   const [alert, setAlert] = useState<{ show: boolean; message: string; type: 'success' | 'error' }>({
     show: false,
     message: '',
@@ -96,7 +97,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-6 bg-primary">
+    <main className="flex min-h-screen flex-col items-center justify-between p-6 bg-[#346cdb]">
       {alert.show && (
         <Alert 
           message={alert.message} 
@@ -105,23 +106,29 @@ export default function Home() {
         />
       )}
       
-      <div className="w-full max-w-md mx-auto bg-primary p-6 rounded-lg shadow-lg animate-fade-in">
+      <div className="w-full max-w-md mx-auto bg-[#346cdb] p-6 rounded-lg shadow-lg animate-fade-in">
         <div className="flex justify-center mb-6">
-          {/* Логотип, который пользователь должен добавить в public/images/ */}
-          <div className="relative w-32 h-32">
-            <Image 
-              src="/images/logo.png" 
-              alt="Lego мультфильм логотип" 
-              fill
-              style={{ objectFit: 'contain' }}
-              priority
-            />
-          </div>
+          {!logoError ? (
+            <div className="relative w-32 h-32">
+              <Image 
+                src="/images/logo.png" 
+                alt="Lego мультфильм логотип" 
+                fill
+                style={{ objectFit: 'contain' }}
+                priority
+                onError={() => setLogoError(true)}
+              />
+            </div>
+          ) : (
+            <div className="w-32 h-32 flex items-center justify-center bg-[#ff5db7] rounded-full text-white font-bold text-xl">
+              LEGO
+            </div>
+          )}
         </div>
         
         <h1 className="text-2xl font-bold text-center text-white mb-6">
           Форма для голосования за Lego-мультфильм<br />
-          <span className="text-secondary">Номинация "Выбор зрителя"</span>
+          <span className="text-[#ff5db7]">Номинация "Выбор зрителя"</span>
         </h1>
         
         <p className="text-center text-white mb-8">
