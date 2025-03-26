@@ -11,5 +11,5 @@ repo: https://github.com/dichenko/smj_vote.git
 - Аккаунт Supabase подключен к Vercel
 - Node.js (v18+ рекомендуется)
 - npm или yarn
-- Telegram Bot (для Mini App)
+- Telegram Bot (для Mini App) 
 
