@@ -26,7 +26,7 @@ const Alert: React.FC<AlertProps> = ({
   return (
     <div className="fixed top-0 left-0 right-0 flex justify-center p-4 z-50">
       <div
-        className={`${bgColor} text-white px-6 py-3 rounded-md shadow-lg max-w-md text-center animate-fade-in`}
+        className={`${bgColor} text-[#ffffff] px-6 py-3 rounded-md shadow-lg max-w-md text-center animate-fade-in`}
       >
         {message}
       </div>

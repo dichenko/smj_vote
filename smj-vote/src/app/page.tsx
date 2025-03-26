@@ -120,18 +120,18 @@ export default function Home() {
               />
             </div>
           ) : (
-            <div className="w-32 h-32 flex items-center justify-center bg-[#ff5db7] rounded-full text-white font-bold text-xl">
+            <div className="w-32 h-32 flex items-center justify-center bg-[#ff5db7] rounded-full text-[#ffffff] font-bold text-xl">
               LEGO
             </div>
           )}
         </div>
         
-        <h1 className="text-2xl font-bold text-center text-white mb-6">
+        <h1 className="text-2xl font-bold text-center text-[#ffffff] mb-6">
           Форма для голосования за Lego-мультфильм<br />
           <span className="text-[#ff5db7]">Номинация "Выбор зрителя"</span>
         </h1>
         
-        <p className="text-center text-white mb-8">
+        <p className="text-center text-[#ffffff] mb-8">
           Выберите номера трех роликов, которые вам понравились больше всего.
         </p>
         

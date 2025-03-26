@@ -11,7 +11,7 @@
 body {
   background-color: var(--primary);
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: #ffffff;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -19,7 +19,7 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply bg-[#ff5db7] text-white font-bold py-2 px-4 rounded-md hover:bg-opacity-90 transition-all;
+    @apply bg-[#ff5db7] text-[#ffffff] font-bold py-2 px-4 rounded-md hover:bg-opacity-90 transition-all;
   }
 }
 

@@ -22,7 +22,7 @@ const VideoSelector: React.FC<VideoSelectorProps> = ({
 
   return (
     <div className="mb-4">
-      <label htmlFor={id} className="block text-white font-medium mb-2">
+      <label htmlFor={id} className="block text-[#ffffff] font-medium mb-2">
         {label}
       </label>
       <select
