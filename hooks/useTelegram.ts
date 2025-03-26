@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 interface TelegramUser {
   id: string;
   first_name?: string;
-  last_name?: string;
   username?: string;
 }
 
@@ -23,11 +22,10 @@ export function useTelegram() {
             setUser({
               id: WebApp.initDataUnsafe.user.id.toString(),
               first_name: WebApp.initDataUnsafe.user.first_name,
-              last_name: WebApp.initDataUnsafe.user.last_name,
               username: WebApp.initDataUnsafe.user.username,
             });
           } else {
-            // Для локальной разработки можно использовать тестовый ID
+            // Для локальной разработки
             setUser({
               id: 'test_user_id_123',
               first_name: 'Test',
@@ -37,14 +35,6 @@ export function useTelegram() {
           
           setIsReady(true);
           WebApp.expand();
-        } else {
-          // Серверный рендеринг
-          setUser({
-            id: 'test_user_id_123',
-            first_name: 'Test',
-            username: 'testuser',
-          });
-          setIsReady(true);
         }
       } catch (error) {
         console.error('Failed to initialize Telegram WebApp:', error);

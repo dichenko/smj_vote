@@ -12,4 +12,4 @@ repo: https://github.com/dichenko/smj_vote.git
 - Node.js (v18+ рекомендуется)
 - npm или yarn
 - Telegram Bot (для Mini App)
-- Аккаунт Vercel (для деплоя)
+
