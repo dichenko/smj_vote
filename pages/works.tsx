@@ -82,12 +82,7 @@ function WorksPage() {
             <h3 className="work-title">№4 Добрые дела (Екатеринбург)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №4 */}
-              <iframe 
-                src="https://rutube.ru/play/embed/placeholder4/" 
-                frameBorder="0" 
-                allow="clipboard-write; autoplay" 
-                allowFullScreen
-              />
+              <iframe width="720" height="405" src="https://rutube.ru/play/embed/dbc09df3fd596b8222d7cdb24d3f12b0/?p=riQCTH5eURv6JYwdd4svtA" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
           </div>
           
@@ -96,12 +91,7 @@ function WorksPage() {
             <h3 className="work-title">№5 Случай в городе "Смартленд" (Новосибирск)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №5 */}
-              <iframe 
-                src="https://rutube.ru/play/embed/placeholder5/" 
-                frameBorder="0" 
-                allow="clipboard-write; autoplay" 
-                allowFullScreen
-              />
+              <iframe width="720" height="405" src="https://rutube.ru/play/embed/c26029fdb1307868f3e07880efe59bec/?p=ml_xdMs4uNsdhHVsqElfDg" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
           </div>
           
@@ -110,12 +100,7 @@ function WorksPage() {
             <h3 className="work-title">№6 Семейный рецепт (Пермь)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №6 */}
-              <iframe 
-                src="https://rutube.ru/play/embed/placeholder6/" 
-                frameBorder="0" 
-                allow="clipboard-write; autoplay" 
-                allowFullScreen
-              />
+              <iframe width="720" height="405" src="https://rutube.ru/play/embed/b517e2db6e93926005b1b5483ea71338/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
           </div>
           
@@ -152,12 +137,7 @@ function WorksPage() {
             <h3 className="work-title">№9 Сбежавшее молоко (Томск)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №9 */}
-              <iframe 
-                src="https://rutube.ru/play/embed/placeholder9/" 
-                frameBorder="0" 
-                allow="clipboard-write; autoplay" 
-                allowFullScreen
-              />
+              <iframe width="720" height="405" src="https://rutube.ru/play/embed/e5b3ffb4afe01dc56023cf3c98ca7749/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
           </div>
           
@@ -166,12 +146,7 @@ function WorksPage() {
             <h3 className="work-title">№10 Яркий мир (Челябинск)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №10 */}
-              <iframe 
-                src="https://rutube.ru/play/embed/placeholder10/" 
-                frameBorder="0" 
-                allow="clipboard-write; autoplay" 
-                allowFullScreen
-              />
+              <iframe width="720" height="405" src="https://rutube.ru/play/embed/b7402965a43777ad7dbe908eba672a9d/?p=SICFzCthbPUaS_PyAU7QEQ" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
           </div>
         </div>
