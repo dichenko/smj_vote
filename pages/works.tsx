@@ -41,7 +41,7 @@ function WorksPage() {
         <div className="works-container">
           {/* Плейсхолдер для работы №1 */}
           <div className="work-item">
-            <h3 className="work-title">№1 Весёлая история (Екатеринбург)</h3>
+            <h3 className="work-title">№1 Предшабатний переполох (Биробиджан)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №1 */}
               <iframe 
@@ -55,7 +55,7 @@ function WorksPage() {
           
           {/* Плейсхолдер для работы №2 */}
           <div className="work-item">
-            <h3 className="work-title">№2 Приключения Лего-человечков (Москва)</h3>
+            <h3 className="work-title">№2 Поучительная история (Брянск)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №2 */}
               <iframe 
@@ -69,21 +69,17 @@ function WorksPage() {
           
           {/* Плейсхолдер для работы №3 */}
           <div className="work-item">
-            <h3 className="work-title">Название работы №3</h3>
+            <h3 className="work-title">№3 Хвостатая доброта (Витебск</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №3 */}
-              <iframe 
-                src="https://rutube.ru/play/embed/placeholder3/" 
-                frameBorder="0" 
-                allow="clipboard-write; autoplay" 
-                allowFullScreen
-              />
+              <iframe width="720" height="405" 
+              src="https://rutube.ru/play/embed/30e9fec7b101c6ceafa74bebc41df425/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
           </div>
           
           {/* Плейсхолдер для работы №4 */}
           <div className="work-item">
-            <h3 className="work-title">Название работы №4</h3>
+            <h3 className="work-title">№4 Добрые дела (Екатеринбург)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №4 */}
               <iframe 
@@ -97,7 +93,7 @@ function WorksPage() {
           
           {/* Плейсхолдер для работы №5 */}
           <div className="work-item">
-            <h3 className="work-title">Название работы №5</h3>
+            <h3 className="work-title">№5 Случай в городе "Смартленд" (Новосибирск)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №5 */}
               <iframe 
@@ -111,7 +107,7 @@ function WorksPage() {
           
           {/* Плейсхолдер для работы №6 */}
           <div className="work-item">
-            <h3 className="work-title">Название работы №6</h3>
+            <h3 className="work-title">№6 Семейный рецепт (Пермь)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №6 */}
               <iframe 
@@ -125,7 +121,7 @@ function WorksPage() {
           
           {/* Плейсхолдер для работы №7 */}
           <div className="work-item">
-            <h3 className="work-title">Название работы №7</h3>
+            <h3 className="work-title">№7 Забытый чемодан (Ростов)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №7 */}
               <iframe 
@@ -139,7 +135,7 @@ function WorksPage() {
           
           {/* Плейсхолдер для работы №8 */}
           <div className="work-item">
-            <h3 className="work-title">Название работы №8</h3>
+            <h3 className="work-title">№8 Эсав, дай цдаку! (Самара)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №8 */}
               <iframe 
@@ -153,7 +149,7 @@ function WorksPage() {
           
           {/* Плейсхолдер для работы №9 */}
           <div className="work-item">
-            <h3 className="work-title">Название работы №9</h3>
+            <h3 className="work-title">№9 Сбежавшее молоко (Томск)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №9 */}
               <iframe 
@@ -167,7 +163,7 @@ function WorksPage() {
           
           {/* Плейсхолдер для работы №10 */}
           <div className="work-item">
-            <h3 className="work-title">Название работы №10</h3>
+            <h3 className="work-title">№10 Яркий мир (Челябинск)</h3>
             <div className="video-wrapper">
               {/* Здесь будет код вставки плеера №10 */}
               <iframe 
