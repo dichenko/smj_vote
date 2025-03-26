@@ -107,7 +107,7 @@ export default function Home() {
       )}
       
       <div className="w-full max-w-md mx-auto bg-[#346cdb] p-6 rounded-lg shadow-lg animate-fade-in">
-        <div className="flex justify-center margin-bottom-6">
+        <div className="flex justify-center mb-6">
           {!logoError ? (
             <div className="relative w-32 h-32">
               <Image 
@@ -126,12 +126,12 @@ export default function Home() {
           )}
         </div>
         
-        <h1 className="text-2xl font-[700] text-center text-[#ffffff] margin-bottom-6">
+        <h1 className="text-2xl font-[700] text-center text-[#ffffff] mb-6">
           Форма для голосования за Lego-мультфильм<br />
           <span className="text-[#ff5db7]">Номинация "Выбор зрителя"</span>
         </h1>
         
-        <p className="text-center text-[#ffffff] margin-bottom-8">
+        <p className="text-center text-[#ffffff] mb-8">
           Выберите номера трех роликов, которые вам понравились больше всего.
         </p>
         
@@ -151,7 +151,7 @@ export default function Home() {
           <button
             type="submit"
             disabled={hasVoted || isSubmitting}
-            className={`w-full bg-[#ff5db7] text-[#ffffff] font-[700] padding-y-2 padding-x-4 rounded-md hover:bg-opacity-90 transition-all ${
+            className={`w-full bg-[#ff5db7] text-[#ffffff] font-[700] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all ${
               hasVoted || isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
