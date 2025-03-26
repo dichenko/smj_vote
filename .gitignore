@@ -30,8 +30,11 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files (keep .env.local for Vercel)
+.env.local.example
+.env.development.local
+.env.test.local
+.env.production.local
 
 # vercel
 .vercel
@@ -40,4 +43,3 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 temp_dir/ 
-smj-vote/ 
