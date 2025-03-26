@@ -19,7 +19,7 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply bg-[#ff5db7] text-[#ffffff] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all;
+    @apply bg-[#ff5db7] text-[#ffffff] padding-y-2 padding-x-4 rounded-md hover:bg-opacity-90 transition-all;
   }
 }
 
