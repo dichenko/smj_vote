@@ -23,7 +23,7 @@ h1 {
   background-color: #346cdb;
   padding: 15px;
   border-radius: 6px;
-  font-family: 'Dela Gothic One', cursive;
+  font-family: 'Dela Gothic One;
   font-weight: 400;
 }
 
@@ -34,7 +34,7 @@ h1 {
 }
 
 .logo img {
-  max-width: 100%;
+  max-width: 150%;
   height: auto;
   object-fit: contain;
 }
