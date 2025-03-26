@@ -6,8 +6,10 @@ alwaysApply: true
 
 repo: https://github.com/dichenko/smj_vote.git
 моя операционная система - Windows 10
+- Аккаунт Vercel (для деплоя)
+= все переменные env уже записаны на Vercel
+- Аккаунт Supabase подключен к Vercel
 - Node.js (v18+ рекомендуется)
 - npm или yarn
-- Аккаунт Supabase
 - Telegram Bot (для Mini App)
 - Аккаунт Vercel (для деплоя)

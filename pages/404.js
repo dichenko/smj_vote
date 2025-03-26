@@ -1,14 +1,11 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 
-export default function Home() {
-  const router = useRouter();
-  
+export default function Custom404() {
   useEffect(() => {
-    // Перенаправляем на основной маршрут
+    // Перенаправляем на главную страницу
     window.location.href = '/';
   }, []);
-  
+
   return (
     <div style={{ 
       display: 'flex', 
@@ -23,7 +20,7 @@ export default function Home() {
         fontSize: '24px',
         marginBottom: '16px'
       }}>
-        Загрузка...
+        Перенаправление на главную страницу...
       </div>
       <div style={{
         width: '50px',
