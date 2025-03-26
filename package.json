@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cp index.html .next/",
+    "build": "next build && copy index.html .next\\standalone\\ || cp index.html .next/standalone/",
     "start": "next start",
     "lint": "next lint"
   },
