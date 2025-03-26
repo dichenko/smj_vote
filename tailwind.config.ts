@@ -7,6 +7,17 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'py-2',
+    'px-3',
+    'px-4',
+    'px-6',
+    'py-3',
+    'mb-2',
+    'mb-4',
+    'mb-6',
+    'mb-8'
+  ],
   theme: {
     extend: {
       colors: {
