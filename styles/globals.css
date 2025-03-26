@@ -148,13 +148,13 @@ button:disabled {
 
 .back-button {
   margin-bottom: 15px;
-  background-color: #346cdb;
-  background-image: linear-gradient(45deg, #346cdb, #4a7ae0, #346cdb);
+  background-color: #ff5db7;
+  background-image: linear-gradient(45deg, #ff5db7, #ff8cc8, #ff5db7);
 }
 
 .back-button:hover {
-  background-color: #4a7ae0;
-  box-shadow: 0 6px 15px rgba(52, 108, 219, 0.5);
+  background-color: #ff8cc8;
+  box-shadow: 0 6px 15px rgba(255, 93, 183, 0.5);
 }
 
 .works-container {
@@ -208,11 +208,11 @@ button:disabled {
 
 .works-button {
   margin-bottom: 20px;
-  background-color: #346cdb;
-  background-image: linear-gradient(45deg, #346cdb, #4a7ae0, #346cdb);
+  background-color: #ff5db7;
+  background-image: linear-gradient(45deg, #ff5db7, #ff8cc8, #ff5db7);
 }
 
 .works-button:hover {
-  background-color: #4a7ae0;
-  box-shadow: 0 6px 15px rgba(52, 108, 219, 0.5);
+  background-color: #ff8cc8;
+  box-shadow: 0 6px 15px rgba(255, 93, 183, 0.5);
 } 
