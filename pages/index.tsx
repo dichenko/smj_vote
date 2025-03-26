@@ -159,7 +159,7 @@ function HomePage() {
             <VideoSelector
               key={index}
               id={`video-${index + 1}`}
-              label={`Отдать голос за ролик #${index + 1}`}
+              label={`Отдать голос за ролик под номером`}
               value={videoChoices[index]}
               onChange={(value) => handleChoiceChange(index, value)}
               disabled={hasVoted || isSubmitting}
