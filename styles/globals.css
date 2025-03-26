@@ -60,22 +60,45 @@ h1 {
 button {
   width: 100%;
   padding: 12px;
-  background-color: #1e88e5;
+  background-color: #ff5db7;
+  background-image: linear-gradient(45deg, #ff5db7, #ff8cc8, #ff5db7);
+  background-size: 200% 200%;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 10px rgba(255, 93, 183, 0.4);
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 button:hover {
-  background-color: #1976d2;
+  background-color: #ff8cc8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 93, 183, 0.5);
 }
 
 button:disabled {
   background-color: #cccccc;
+  background-image: none;
+  animation: none;
   cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }
 
 .alert {
