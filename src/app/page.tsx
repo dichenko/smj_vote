@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import VideoSelector from '../../components/VideoSelector';
 import Alert from '../../components/Alert';
@@ -20,13 +20,15 @@ export default function Home() {
     type: 'success'
   });
 
-  useEffect(() => {
-    if (user && isReady) {
-      checkUserVoted();
-    }
-  }, [user, isReady]);
+  const showAlert = useCallback((message: string, type: 'success' | 'error') => {
+    setAlert({
+      show: true,
+      message,
+      type
+    });
+  }, []);
 
-  const checkUserVoted = async () => {
+  const checkUserVoted = useCallback(async () => {
     if (!user) return;
     
     const voted = await hasUserVoted(user.id);
@@ -35,15 +37,13 @@ export default function Home() {
     if (voted) {
       showAlert('Вы уже проголосовали', 'error');
     }
-  };
+  }, [user, showAlert]);
 
-  const showAlert = (message: string, type: 'success' | 'error') => {
-    setAlert({
-      show: true,
-      message,
-      type
-    });
-  };
+  useEffect(() => {
+    if (user && isReady) {
+      checkUserVoted();
+    }
+  }, [user, isReady, checkUserVoted]);
 
   const handleChoiceChange = (index: number, value: number) => {
     const newChoices = [...videoChoices];
@@ -128,7 +128,7 @@ export default function Home() {
         
         <h1 className="text-2xl font-[700] text-center text-[#ffffff] mb-6">
           Форма для голосования за Lego-мультфильм<br />
-          <span className="text-[#ff5db7]">Номинация "Выбор зрителя"</span>
+          <span className="text-[#ff5db7]">Номинация &quot;Выбор зрителя&quot;</span>
         </h1>
         
         <p className="text-center text-[#ffffff] mb-8">
