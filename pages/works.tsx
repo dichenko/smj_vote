@@ -3,20 +3,6 @@ import dynamic from 'next/dynamic';
 import { useTelegram } from '../hooks/useTelegram';
 import Link from 'next/link';
 
-// Данные о видеороликах участников
-const participantWorks = [
-  { id: 1, title: "Работа №1", rutubeId: "a7f8c8f8f4c49d3f7c4602d7fdb9a439" },
-  { id: 2, title: "Работа №2", rutubeId: "5a8107f2c7a17b0dcba9dbf561a3265f" },
-  { id: 3, title: "Работа №3", rutubeId: "63b50c2c37714c2e915a2d0a1dbd2de5" },
-  { id: 4, title: "Работа №4", rutubeId: "6ff57651fba56f4fa3b1ba7bcc37a5db" },
-  { id: 5, title: "Работа №5", rutubeId: "52f1c4f9d180dc0ad11a2ae7c0c4b2a2" },
-  { id: 6, title: "Работа №6", rutubeId: "a13dc5a456e6a4a5ddb0cce519f32e3d" },
-  { id: 7, title: "Работа №7", rutubeId: "bd12da863252cc5a15ccdaf0a0346c7d" },
-  { id: 8, title: "Работа №8", rutubeId: "de3fa5e2c49d5d25c15e74ba59e15c3c" },
-  { id: 9, title: "Работа №9", rutubeId: "ee0f40a2f63aa3233f71c0fe01bdccab" },
-  { id: 10, title: "Работа №10", rutubeId: "c2e98abca9f36f81ece91398aa380760" }
-];
-
 // Компонент страницы просмотра работ
 function WorksPage() {
   // Добавляем состояние для отслеживания клиентского рендеринга
@@ -53,19 +39,145 @@ function WorksPage() {
         </div>
 
         <div className="works-container">
-          {participantWorks.map((work) => (
-            <div key={work.id} className="work-item">
-              <h3 className="work-title">{work.title}</h3>
-              <div className="video-wrapper">
-                <iframe 
-                  src={`https://rutube.ru/play/embed/${work.rutubeId}/`} 
-                  frameBorder="0" 
-                  allow="clipboard-write; autoplay" 
-                  allowFullScreen
-                />
-              </div>
+          {/* Плейсхолдер для работы №1 */}
+          <div className="work-item">
+            <h3 className="work-title">Название работы №1</h3>
+            <div className="video-wrapper">
+              {/* Здесь будет код вставки плеера №1 */}
+              <iframe 
+                src="https://rutube.ru/play/embed/placeholder1/" 
+                frameBorder="0" 
+                allow="clipboard-write; autoplay" 
+                allowFullScreen
+              />
             </div>
-          ))}
+          </div>
+          
+          {/* Плейсхолдер для работы №2 */}
+          <div className="work-item">
+            <h3 className="work-title">Название работы №2</h3>
+            <div className="video-wrapper">
+              {/* Здесь будет код вставки плеера №2 */}
+              <iframe 
+                src="https://rutube.ru/play/embed/placeholder2/" 
+                frameBorder="0" 
+                allow="clipboard-write; autoplay" 
+                allowFullScreen
+              />
+            </div>
+          </div>
+          
+          {/* Плейсхолдер для работы №3 */}
+          <div className="work-item">
+            <h3 className="work-title">Название работы №3</h3>
+            <div className="video-wrapper">
+              {/* Здесь будет код вставки плеера №3 */}
+              <iframe 
+                src="https://rutube.ru/play/embed/placeholder3/" 
+                frameBorder="0" 
+                allow="clipboard-write; autoplay" 
+                allowFullScreen
+              />
+            </div>
+          </div>
+          
+          {/* Плейсхолдер для работы №4 */}
+          <div className="work-item">
+            <h3 className="work-title">Название работы №4</h3>
+            <div className="video-wrapper">
+              {/* Здесь будет код вставки плеера №4 */}
+              <iframe 
+                src="https://rutube.ru/play/embed/placeholder4/" 
+                frameBorder="0" 
+                allow="clipboard-write; autoplay" 
+                allowFullScreen
+              />
+            </div>
+          </div>
+          
+          {/* Плейсхолдер для работы №5 */}
+          <div className="work-item">
+            <h3 className="work-title">Название работы №5</h3>
+            <div className="video-wrapper">
+              {/* Здесь будет код вставки плеера №5 */}
+              <iframe 
+                src="https://rutube.ru/play/embed/placeholder5/" 
+                frameBorder="0" 
+                allow="clipboard-write; autoplay" 
+                allowFullScreen
+              />
+            </div>
+          </div>
+          
+          {/* Плейсхолдер для работы №6 */}
+          <div className="work-item">
+            <h3 className="work-title">Название работы №6</h3>
+            <div className="video-wrapper">
+              {/* Здесь будет код вставки плеера №6 */}
+              <iframe 
+                src="https://rutube.ru/play/embed/placeholder6/" 
+                frameBorder="0" 
+                allow="clipboard-write; autoplay" 
+                allowFullScreen
+              />
+            </div>
+          </div>
+          
+          {/* Плейсхолдер для работы №7 */}
+          <div className="work-item">
+            <h3 className="work-title">Название работы №7</h3>
+            <div className="video-wrapper">
+              {/* Здесь будет код вставки плеера №7 */}
+              <iframe 
+                src="https://rutube.ru/play/embed/placeholder7/" 
+                frameBorder="0" 
+                allow="clipboard-write; autoplay" 
+                allowFullScreen
+              />
+            </div>
+          </div>
+          
+          {/* Плейсхолдер для работы №8 */}
+          <div className="work-item">
+            <h3 className="work-title">Название работы №8</h3>
+            <div className="video-wrapper">
+              {/* Здесь будет код вставки плеера №8 */}
+              <iframe 
+                src="https://rutube.ru/play/embed/placeholder8/" 
+                frameBorder="0" 
+                allow="clipboard-write; autoplay" 
+                allowFullScreen
+              />
+            </div>
+          </div>
+          
+          {/* Плейсхолдер для работы №9 */}
+          <div className="work-item">
+            <h3 className="work-title">Название работы №9</h3>
+            <div className="video-wrapper">
+              {/* Здесь будет код вставки плеера №9 */}
+              <iframe 
+                src="https://rutube.ru/play/embed/placeholder9/" 
+                frameBorder="0" 
+                allow="clipboard-write; autoplay" 
+                allowFullScreen
+              />
+            </div>
+          </div>
+          
+          {/* Плейсхолдер для работы №10 */}
+          <div className="work-item">
+            <h3 className="work-title">Название работы №10</h3>
+            <div className="video-wrapper">
+              {/* Здесь будет код вставки плеера №10 */}
+              <iframe 
+                src="https://rutube.ru/play/embed/placeholder10/" 
+                frameBorder="0" 
+                allow="clipboard-write; autoplay" 
+                allowFullScreen
+              />
+            </div>
+          </div>
         </div>
       </div>
     </main>
