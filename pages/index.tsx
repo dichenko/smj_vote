@@ -36,7 +36,7 @@ function HomePage() {
     
     // Автоматически скрываем уведомление через 3 секунды
     setTimeout(() => {
-      setAlert((prev: { show: boolean; message: string; type: 'success' | 'error' }) => ({ ...prev, show: false }));
+      setAlert(prev => ({ ...prev, show: false }));
     }, 3000);
   }, []);
 
@@ -77,7 +77,7 @@ function HomePage() {
     }
     
     // Проверяем, что выбраны все три ролика
-    if (videoChoices.some((choice: number) => choice === 0)) {
+    if (videoChoices.some(choice => choice === 0)) {
       showAlert('Пожалуйста, выберите три ролика', 'error');
       return;
     }
@@ -143,9 +143,9 @@ function HomePage() {
               id={`video-${index + 1}`}
               label={`Отдать голос за ролик под номером #${index + 1}`}
               value={videoChoices[index]}
-              onChange={(value: number) => handleChoiceChange(index, value)}
+              onChange={(value) => handleChoiceChange(index, value)}
               disabled={hasVoted || isSubmitting}
-              selectedValues={videoChoices.filter((v: number) => v !== 0)}
+              selectedValues={videoChoices.filter(v => v !== 0)}
             />
           ))}
           
